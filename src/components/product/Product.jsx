@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-// import "./product.css";
-
 const Product = ({img,link, title, desc}) => {
     return (
         <div className="p">
@@ -15,6 +13,7 @@ const Product = ({img,link, title, desc}) => {
                     <div className="content-overlay"></div>
                     <img  className="content-image" src={img} />
                     <div className="content-details fadeIn-bottom">
+                        <h3 className="mobile">Click Me !!</h3>
                         <h3 className="content-title">{title}</h3>
                         <p className="content-text">
                             {desc}

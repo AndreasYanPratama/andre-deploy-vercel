@@ -39,6 +39,21 @@ export const products = [
       img: "https://drive.google.com/uc?export=view&id=1KKyYGulMEFDXEPEBi6IAMWqhxu6aJpAt",
       link: "https://drive.google.com/uc?export=view&id=1GbtA_LP5B7863AG2CGYAjt7rOu7R4u0H",
       title: "Yoofix Dashboard Filtering",
-      desc: "Project internship for SD Kanisius Sengkan using Codeigniter",
+      desc: "Project internship for PT Yoofix Digital Indonesia using Codeigniter",
     },
+];
+
+export const titles = [
+  {
+    id: 1,
+    title: 'Front End Developer'
+  },
+  {
+    id: 2,
+    title: 'Web Developer'
+  },
+  {
+    id: 3,
+    title: 'Tester'
+  },
 ];

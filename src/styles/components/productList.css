@@ -31,11 +31,26 @@
         padding: 10px;
     }
     
+    .pl-title{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
     .pl-texts {
         width: 100%;
     }
     
     .pl-desc {
         display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .pl {
+        padding: 30px;
+    }
+
+    .pl-texts {
+        width: 100%;
     }
 }

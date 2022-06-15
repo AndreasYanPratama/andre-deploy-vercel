@@ -1,4 +1,3 @@
-// import "./productList.css";
 import Product from "../product/Product";
 import { products } from "@/libraries/repositories/data";
 

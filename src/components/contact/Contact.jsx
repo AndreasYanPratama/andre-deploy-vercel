@@ -1,17 +1,11 @@
-// import "./contact.css";
-// import Phone from "../../img/phone.png";
-// import Email from "/phone.png";
-// import Address from "/address.png";
 import { useContext, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
-// import { ThemeContext } from "../../context";
 import { useToggleDispatch } from '@/redux/reducers/toggle/slice';
 
 const Contact = () => {
     const formRef = useRef();
     const [done, setDone] = useState(false);
-    // const theme = useContext(ThemeContext);
-    // const darkMode = theme.state.darkMode;
+
     const {
         toggleDark,
     } = useToggleDispatch();
@@ -87,9 +81,9 @@ const Contact = () => {
                         <input style={{backgroundColor: toggleDark.dark && "#333", color: toggleDark.dark && "white", borderBottom: toggleDark.dark && "1px solid white"}} type="text" placeholder="Name" name="user_name" />
                         <input style={{backgroundColor: toggleDark.dark && "#333", color: toggleDark.dark && "white", borderBottom: toggleDark.dark && "1px solid white"}} type="text" placeholder="Subject" name="user_subject" />
                         <input style={{backgroundColor: toggleDark.dark && "#333", color: toggleDark.dark && "white", borderBottom: toggleDark.dark && "1px solid white"}} type="text" placeholder="Email" name="user_email" />
-                        <textarea style={{backgroundColor: toggleDark.dark && "#333", color: toggleDark.dark && "white", borderBottom: toggleDark.dark && "1px solid white"}} rows="5" placeholder="Message" name="message" />
-                        <button>Submit</button><br/>
-                        {done && "Thank you for sending your message..."}
+                        <textarea style={{backgroundColor: toggleDark.dark && "#333", color: toggleDark.dark && "white", borderBottom: toggleDark.dark && "1px solid white"}} rows="4" placeholder="Message" name="message" />
+                        <button>Submit</button>
+                        {done && (<span className="message">Thank you for sending your message...</span>)}
                     </form>
                 </div>
             </div>

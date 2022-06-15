@@ -1,64 +1,44 @@
-import styles from "./intro.module.css";
-import Me from "../../../public/me1.png";
-import Image from 'next/image';
 import { useToggleDispatch } from '@/redux/reducers/toggle/slice';
-import { sessionDark } from '@/helpers/darkMode';
+import Typewriter from 'typewriter-effect';
+import { titles } from "@/libraries/repositories/data";
 
 const Intro = () => {
     const {
         toggleDark,
     } = useToggleDispatch();
 
-    // const youKnow = sessionDark();
-    // console.log(youKnow.dark !== undefined ? youKnow.dark : false );
-    // console.log("=> ",(window !== "undefined"))
-
-    // console.log(sessionDark());
-
     return (
-        // class i
         <div className="i"> 
-            {/* i-left */}
             <div className="i-left">
-                {/* .i-left-wrapper */}
                 <div className="i-left-wrapper">
-                    {/* <h2 className="text-4xl font-light">Hello, My name is</h2>
-                    <h2 className="text-6xl font-black">Andreas Yan Pratama</h2>
-                    <div className="truncate pb-14" style={{height: '800px'}}>
-                        <div className="i-title-wrapper">
-                            <div className="i-title-item">Front End Developer</div>
-                            <div className="i-title-item">Web Developer</div>
-                            <div className="i-title-item">Tester</div>
-                        </div>
-                    </div> */}
-                    {/* .i-intro */}
                     <h2 className="i-intro">Hello, My name is</h2>
-                    {/* .i-name */}
                     <h2 className="i-name">Andreas Yan Pratama</h2>
-                    {/* <div className="truncate pb-14" style={{height: '800px'}}> */}
                     <div className="i-title">
                         <div className="i-title-wrapper">
-                            <div className="i-title-item">Front End Developer</div>
-                            <div className="i-title-item">Web Developer</div>
-                            <div className="i-title-item">Tester</div>
+                            <span className="i-title-item">
+                                <Typewriter
+                                    options={{
+                                        strings: titles.map((item) => (item.title)),
+                                        autoStart: true,
+                                        loop: true,
+                                        cursorClassName: "i-cursor"
+                                    }}
+                                />
+                            </span>
                         </div>
                     </div>
-                    {/* i-desc */}
                     <p className="i-desc">
                         I design and develop services for customers of all sizes, 
                         specializing in creating a stylish and modern website front end 
                     </p>
                 </div>
-                {/* i-scroll */}
                 <svg
                     width="75"
                     height="75"
                     viewBox="0 0 75 75"
                     fill="none"
                     stroke={toggleDark.dark ? "white" : "black"}
-                    // stroke="black"
                     className="i-scroll"
-                    // style={{bottom: '20px'}}
                     xmlns="http://www.w3.org/2000/svg"
                     >
                     <g id="scroll">
@@ -109,16 +89,9 @@ const Intro = () => {
                     </g>
                 </svg>
             </div>
-            {/* CSS clip-path maker (Clippy) */}
-            {/* .i-right */}
             <div className="i-right">
-                {/* asas */}
-                {/* i-bg */}
                 <div className="i-bg"></div>
-                {/* <div className="h-full w-full bg-gray-600 absolute" style={{top: '0', right: '0', clipPath: 'polygon(100% 0%, 100% 52%, 100% 100%, 25% 100%, 0% 50%, 25% 0%)'}}>as</div> */}
-                {/* i-img */}
                 <img src="/me1.png" className="i-img" alt="dev logo"/>
-                {/* <img src="/me1.png" className="h-full w-full object-contain absolute" style={{bottom: '0'}} alt="dev logo"/> */}
             </div>
         </div>
     )
