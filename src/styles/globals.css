@@ -4,4 +4,9 @@
 * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-  }
+}
+
+body {
+    max-width:1366px;
+    margin: auto;
+}
