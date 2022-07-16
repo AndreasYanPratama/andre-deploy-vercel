@@ -10,3 +10,94 @@ body {
     max-width:1366px;
     margin: auto;
 }
+
+.dp{
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.dp-texts{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.dp-texts h2{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.dp-texts p{
+    color: #F3AA36;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.dp-desc{
+    margin: 20px 0px;
+}
+
+.dp-roles{
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.dp-roles span{
+    background-color: #F3AA36;
+    margin-right: 10px;
+    padding: 0 10px;
+    border-radius: 10px;
+    color: #222;
+}
+  
+.dp-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+  
+.dp-product{
+    width: 40%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(102, 165, 173, 1);
+    margin: 15px 5px;
+    transition: 0.2s ease;
+    position: relative;
+}
+  
+.dp-product img{
+    width: 100%;
+    border-radius: 20px;
+}
+  
+.dp-des{
+    text-align: start;
+    padding: 10px 0;
+}
+  
+.dp-img-des span{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 480px){
+    .dp{
+        padding: 50px 20px;
+    }
+
+    .dp-roles span{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+}
+
+/* @media screen and (max-width: 800px){} */
